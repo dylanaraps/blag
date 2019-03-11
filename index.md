@@ -3,6 +3,7 @@
 **posts**
 
 - [Minimal Desktop](./rice.md)
+- [An ode to milk](./milk.md)
 <!-- - [Compiling a "modern" web browser](./compiling-a-browser.md) -->
 
 **laptop**

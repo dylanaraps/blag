@@ -2,9 +2,9 @@
 
 **posts**
 
-- [Minimal Desktop](./rice.md)
-- [Breaking `bash`](./breaking-bash.md)
-- [An ode to milk](./milk.md)
+- [Minimal Desktop](./rice)
+- [Breaking `bash`](./breaking-bash)
+- [An ode to milk](./milk)
 <!-- - [Compiling a "modern" web browser](./compiling-a-browser.md) -->
 
 **laptop**

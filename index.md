@@ -5,6 +5,11 @@
 - [Minimal Desktop](./rice.md)
 <!-- - [Compiling a "modern" web browser](./compiling-a-browser.md) -->
 
+**laptop**
+
+- [dotfiles](https://github.com/dylanaraps/dotfiles)
+- [bin](https://github.com/dylanaraps/bin)
+
 **projects**
 
 - [neofetch](https://github.com/dylanaraps/neofetch)

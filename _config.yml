@@ -5,3 +5,5 @@ compress_html:
     comments: all
     endings: all
     startings: [html, head, body]
+kramdown:
+    auto_ids: false

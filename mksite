@@ -7,8 +7,9 @@ templ=\
 
 mkdir -p _site
 
-for md in *.md; do
+for md in *.md pages/*.md; do
+    file_name=${md##*/}
     minify --type html \
         <<< "${templ/'{{content}}'/$(mdtohtml "$md")}" \
-        > "_site/${md/%.md/.html}"
+        > "_site/${file_name/%.md/.html}"
 done

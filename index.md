@@ -1,3 +1,4 @@
 # d
 
-- [Compiling a "modern" web browser](./compiling-a-browser.md)
+- [Minimal Desktop](./rice.md)
+<!-- - [Compiling a "modern" web browser](./compiling-a-browser.md) -->

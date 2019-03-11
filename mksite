@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# mksite - Create a stupid simple website.
+
+templ=\
+'<!DOCTYPE html><html lang=en><head><link href="data:image/png;base64," rel=icon type="image/png"><title>dylan</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll}img,main{display:block;margin:25px auto}main{padding:0 20px;max-width:630px;font-family:sans-serif;line-height:1.5}img{max-width:100%}</style></head><body><main>{{content}}</main></body></html>'
+
+mkdir -p .site
+
+for md in *.md; do
+    minify --type html \
+        <<< "${templ/'{{content}}'/$(mdtohtml "$md")}" \
+        > ".site/${md/%.md/.html}"
+done

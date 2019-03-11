@@ -16,5 +16,3 @@ And oft, when in my heart was heard
 When empty terrors overawe;
 Thou want milk that is raw
 ```
-
-~ sorry

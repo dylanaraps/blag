@@ -6,3 +6,4 @@ compress_html:
     startings: [html, head, body]
 kramdown:
     auto_ids: false
+    syntax_highlighter: +nil+

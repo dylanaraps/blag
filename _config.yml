@@ -1,2 +1,7 @@
-theme:
+theme: ""
 permalink: pretty
+compress_html:
+    clippings: all
+    comments: all
+    endings: all
+    startings: [html, head, body]

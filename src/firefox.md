@@ -4,6 +4,8 @@ I have an interest in compiling my web browser from scratch to remove telemetry 
 
 Picking a web browser nowadays is less about picking which one is the best and more about picking which one is the lesser evil. Each new version removes long loved features and instead introduces unwanted changes. Each version also becomes harder and harder to build yourself.
 
+My expectation from an Open Source Web Browser is that it doesn't collect any data from me whatsoever. No matter how anonymized it may be. Even the disabling of telemetry doesn't fully stop this from happening.
+
 This post will focus primarily on Firefox as Chromium makes no claims to caring about your privacy whatsoever and it's well, Google.
 
 

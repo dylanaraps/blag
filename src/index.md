@@ -2,13 +2,13 @@
 
 **posts**
 
-- [Minimal Desktop](/rice)
 - [Breaking `bash`](/breaking-bash)
 - [An ode to milk](/milk)
 <!-- - [Compiling a "modern" web browser](./compiling-a-browser.md) -->
 
 **laptop**
 
+- [screenshots](/rice)
 - [dotfiles](https://github.com/dylanaraps/dotfiles)
 - [bin](https://github.com/dylanaraps/bin)
 

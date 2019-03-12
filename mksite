@@ -2,7 +2,7 @@
 #
 # mksite - Create a stupid simple website.
 
-templ='<!DOCTYPE html><html lang=en><head><meta name="description" content="the big boys at central want to install nodejs on my toaster"/><link href="data:image/png;base64," rel=icon type="image/png"><title>blck blag</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll}img,main{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{display:block;padding:20px;white-space:pre-line}code{background:#eee;padding:5px}blockquote{border-left:7px solid #ddd;padding-left:14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}</style></head><body><main>{{content}}</main></body></html>'
+templ='<!DOCTYPE html><html lang=en><head><meta name="description" content="the big boys at central want to install nodejs on my toaster"/><link href="data:image/png;base64," rel=icon type="image/png"><title>blck blag</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll}img,main{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{display:block;padding:20px;white-space:pre-line}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding-left:14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}</style></head><body><main>{{content}}</main></body></html>'
 
 rm -rf .site/images
 mkdir -p .site/images
@@ -15,11 +15,14 @@ for md in src/*.md; do
 
 
     minify --type html \
-        <<< "${templ/'{{content}}'/${home}$(mdtohtml "$md")}" \
+        <<< "${templ/'{{content}}'/${home}$(pandoc "$md")}" \
         > ".site/${file_name/%.md/.html}"
 
     home=
 done
+
+[[ $1 == noimg ]] &&
+    exit
 
 cd .site/images || exit
 

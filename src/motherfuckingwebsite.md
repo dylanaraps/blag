@@ -1,3 +1,3 @@
-# ✝ Your local Christian Website ✝
+# Website
 
-No swearing on my Christian website.
+Yup it's a website.

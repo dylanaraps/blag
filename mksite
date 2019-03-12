@@ -10,3 +10,11 @@ for md in src/index.md src/pages/*.md; do
         <<< "${templ/'{{content}}'/$(mdtohtml "$md")}" \
         > "${file_name/%.md/.html}"
 done
+
+for img in ~/Pictures/site/*.jpg; do
+    file_name=${img##*/}
+    convert "$img" -resize 630x "images/${file_name}"
+    jpegoptim -s "images/${file_name}"
+    img2webp -lossy -q 75 "images/${file_name}" \
+             -o "images/${file_name/%.jpg/.webp}"
+done

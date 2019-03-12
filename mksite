@@ -11,10 +11,17 @@ for md in src/index.md src/pages/*.md; do
         > "${file_name/%.md/.html}"
 done
 
+cd images || exit
 for img in ~/Pictures/site/*.jpg; do
     file_name=${img##*/}
-    convert "$img" -resize 630x "images/${file_name}"
-    jpegoptim -s "images/${file_name}"
-    img2webp -lossy -q 75 "images/${file_name}" \
-             -o "images/${file_name/%.jpg/.webp}"
+    x2=${file_name/%.jpg/-2x.jpg}
+
+    convert "$img" -resize 630x  "$file_name"
+    convert "$img" -resize 1260x "$x2"
+
+    jpegoptim -s "$file_name"
+    jpegoptim -s "$x2"
+
+    img2webp -lossy -q 75 "$file_name" -o "${file_name%.jpg}.webp"
+    img2webp -lossy -q 75 "$x2" -o "${x2%.jpg}.webp"
 done

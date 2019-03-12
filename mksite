@@ -19,8 +19,8 @@ for img in ~/Pictures/site/*.jpg; do (
     file_name=${img##*/}
     x2=${file_name/%.jpg/-2x.jpg}
 
-    convert "$img" -resize 630x  "$file_name"
-    convert "$img" -resize 1260x "$x2"
+    convert "$img" -resize 630x\>  "$file_name"
+    convert "$img" -resize 1260x\> "$x2"
 
     jpegoptim -s "$file_name" "$x2"
 

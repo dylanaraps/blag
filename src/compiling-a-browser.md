@@ -57,6 +57,6 @@ Source: [\[3\]](#sources)
 
 ## Sources
 
-- \[1\] https://blog.mozilla.org/metrics/fhr-faq/
-- \[2\] https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/optout-ping.html
-- \[3\] https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/environment.html
+- \[1\] [https://blog.mozilla.org/metrics/fhr-faq/]
+- \[2\] [https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/optout-ping.html]
+- \[3\] [https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/environment.html]

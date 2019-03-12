@@ -1,5 +1,7 @@
 # blck blag
 
+Linux is dead, world is a fuck.
+
 **posts**
 
 - [Breaking `bash`](/breaking-bash)

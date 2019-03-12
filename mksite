@@ -22,8 +22,7 @@ for img in ~/Pictures/site/*.jpg; do (
     convert "$img" -resize 630x  "$file_name"
     convert "$img" -resize 1260x "$x2"
 
-    jpegoptim -s "$file_name"
-    jpegoptim -s "$x2"
+    jpegoptim -s "$file_name" "$x2"
 
     img2webp -lossy -q 90 "$file_name" -o "${file_name%.jpg}.webp"
     img2webp -lossy -q 90 "$x2" -o "${x2%.jpg}.webp"

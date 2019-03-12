@@ -8,9 +8,16 @@ mkdir -p .site/images
 
 for md in src/index.md src/pages/*.md; do
     file_name=${md##*/}
+
+    [[ $file_name != index.md ]] &&
+        home="<a href='/'>home</a>"
+
+
     minify --type html \
-        <<< "${templ/'{{content}}'/$(mdtohtml "$md")}" \
+        <<< "${templ/'{{content}}'/${home}$(mdtohtml "$md")}" \
         > ".site/${file_name/%.md/.html}"
+
+    home=
 done
 
 cd .site/images || exit

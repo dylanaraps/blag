@@ -11,8 +11,10 @@ for md in src/index.md src/pages/*.md; do
         > "${file_name/%.md/.html}"
 done
 
+mkdir -p images
 cd images || exit
-for img in ~/Pictures/site/*.jpg; do
+
+for img in ~/Pictures/site/*.jpg; do (
     file_name=${img##*/}
     x2=${file_name/%.jpg/-2x.jpg}
 
@@ -24,4 +26,6 @@ for img in ~/Pictures/site/*.jpg; do
 
     img2webp -lossy -q 75 "$file_name" -o "${file_name%.jpg}.webp"
     img2webp -lossy -q 75 "$x2" -o "${x2%.jpg}.webp"
-done
+) & done
+
+wait

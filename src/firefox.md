@@ -12,6 +12,7 @@ This post will focus primarily on Firefox as Chromium makes no claims to caring 
 <!-- vim-markdown-toc GFM -->
 
 * [Telemetry](#telemetry)
+    * [Organic Search](#organic-search)
     * [Firefox Health Report](#firefox-health-report)
     * ["optout" ping](#optout-ping)
     * [Environment ping](#environment-ping)
@@ -21,6 +22,14 @@ This post will focus primarily on Firefox as Chromium makes no claims to caring 
 
 
 ## Telemetry
+
+### Organic Search
+
+Firefox sends the number of searches you make in the browser to Mozilla.
+
+> Last year we launched the in-content search probe, which counts the number of queries Firefox users issue to our search partners. ...
+
+Source: [\[0\]](#sources)
 
 ### Firefox Health Report
 
@@ -57,6 +66,7 @@ Source: [\[3\]](#sources)
 
 ## Sources
 
+- \[0\] <https://blog.mozilla.org/data/2018/08/20/effectively-measuring-search-in-firefox/>
 - \[1\] <https://blog.mozilla.org/metrics/fhr-faq/>
 - \[2\] <https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/optout-ping.html>
 - \[3\] <https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/environment.html>

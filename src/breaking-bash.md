@@ -1,4 +1,4 @@
-# Breaking `bash`
+# Breaking bash
 
 Crash `bash` with a one-liner:
 

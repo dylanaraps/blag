@@ -6,7 +6,7 @@ templ='<!DOCTYPE html><html lang=en><head><link href="data:image/png;base64," re
 
 mkdir -p .site/images
 
-for md in src/index.md src/pages/*.md; do
+for md in src/*.md; do
     file_name=${md##*/}
 
     [[ $file_name != index.md ]] &&

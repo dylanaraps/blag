@@ -2,7 +2,7 @@
 #
 # mksite - Create a stupid simple website.
 
-templ='<!DOCTYPE html><html lang=en><head><link href="data:image/png;base64," rel=icon type="image/png"><title>dylan</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll}img,main{display:block;margin:25px auto}main{padding:20px;max-width:630px;font-family:sans-serif;line-height:1.5}img{max-width:100%}</style></head><body><main>{{content}}</main></body></html>'
+templ='<!DOCTYPE html><html lang=en><head><link href="data:image/png;base64," rel=icon type="image/png"><title>dylan</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll}img,main{display:block;margin:25px auto}main{padding:20px;max-width:600px;font-family:sans-serif;line-height:1.5}img{max-width:100%}</style></head><body><main>{{content}}</main></body></html>'
 
 mkdir -p .site/images
 
@@ -19,8 +19,8 @@ for img in ~/Pictures/site/*.jpg; do (
     file_name=${img##*/}
     x2=${file_name/%.jpg/-2x.jpg}
 
-    convert "$img" -resize 630x\>  "$file_name"
-    convert "$img" -resize 1260x\> "$x2"
+    convert "$img" -resize 600x\>  "$file_name"
+    convert "$img" -resize 1200x\> "$x2"
 
     jpegoptim -s "$file_name" "$x2"
 

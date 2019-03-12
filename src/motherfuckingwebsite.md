@@ -32,6 +32,10 @@ for ((i=${#s}-1;i>=0;i--)) {
 }
 ```
 
+<br>
+
+---
+
 ## Made with ❤︎ by WHO THE FUCK CARES
 
 You can find me here:

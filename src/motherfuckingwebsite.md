@@ -1,3 +1,3 @@
-# Motherfucking fucker fuck website is a fuck
+# Your local Christian Website
 
-See this website? It's fucked.
+See this website? It's holy.

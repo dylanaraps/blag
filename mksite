@@ -25,8 +25,8 @@ for img in ~/Pictures/site/*.jpg; do (
     jpegoptim -s "$file_name"
     jpegoptim -s "$x2"
 
-    img2webp -lossy -q 75 "$file_name" -o "${file_name%.jpg}.webp"
-    img2webp -lossy -q 75 "$x2" -o "${x2%.jpg}.webp"
+    img2webp -lossy -q 90 "$file_name" -o "${file_name%.jpg}.webp"
+    img2webp -lossy -q 90 "$x2" -o "${x2%.jpg}.webp"
 ) & done
 
 wait

@@ -4,7 +4,7 @@ Linux is dead, world is a fuck.
 
 **posts**
 
-- [Breaking `bash`](/breaking-bash)
+- [Breaking bash](/breaking-bash)
 - [An ode to milk](/milk)
 <!-- - [Compiling a "modern" web browser](./compiling-a-browser.md) -->
 

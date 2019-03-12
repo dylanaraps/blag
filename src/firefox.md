@@ -18,6 +18,7 @@ This post will focus primarily on Firefox as Chromium makes no claims to caring 
     * [Firefox Health Report](#firefox-health-report)
     * ["optout" ping](#optout-ping)
     * [Environment ping](#environment-ping)
+    * [Ad click measurement](#ad-click-measurement)
 * [Sources](#sources)
 
 <!-- vim-markdown-toc -->
@@ -65,6 +66,14 @@ I would recommend reading through what kind of data is sent in the link below. I
 
 Source: [\[3\]](#sources)
 
+
+### Ad click measurement
+
+Firefox will (*The source is over 6 months old so this may have landed.*) track the number of times you click on an advertisement on a search page.
+
+> We also plan to count the number of times a search page displays ads and the number of times users click ads. These will be counts by user. Mozilla will not know the content of the search nor the content of the ads. This helps us both forecast Mozilla revenue and also understand the impact of ad blocking on the larger web ecosystem.
+
+Source: [\[0\]](#sources)
 
 ## Sources
 

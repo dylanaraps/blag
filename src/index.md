@@ -1,4 +1,4 @@
-# blck blag
+# blckk
 
 Linux is dead, world is a fuck.
 

@@ -1,4 +1,3 @@
-
 # This website
 
 I redesigned my website to be what I believe the web should be as a whole. Readability and Accessibility are its primary goals. There is no `javascript`, animation, `webgl`, analytics, tracking or *insert web technology here*. It is just `html`, minimal `css` and sometimes images.

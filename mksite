@@ -13,7 +13,7 @@ for md in src/*.md; do
     file_name=${md##*/}
 
     [[ $file_name != index.md ]] &&
-        home="<a href='/'>blck blag</a>"
+        home="<a href='/'>blckk</a>"
 
 
     minify --type html \

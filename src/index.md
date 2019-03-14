@@ -7,6 +7,7 @@ Linux is dead, world is a fuck.
 - [This website](/website)
 - [Minimal Linux desktop](/rice)
 
+<!--
 **laptop**
 
 - [dotfiles](https://github.com/dylanaraps/dotfiles)
@@ -24,3 +25,4 @@ Linux is dead, world is a fuck.
 - [pash](https://github.com/dylanaraps/pash)
 - [promptless](https://github.com/dylanaraps/promptless)
 - [pxltrm](https://github.com/dylanaraps/pxltrm)
+-->

@@ -1,6 +1,6 @@
 # blckk
 
-Linux is dead, world is a fuck.
+\* is dead, world is a fuck.
 
 **posts**
 

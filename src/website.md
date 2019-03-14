@@ -12,14 +12,13 @@ The build process looks like this:
 3. Minify the resulting `html` file.
 4. Save it to `.site/`.
 
-The site also passes all tests using `lighthouse` (*which is what Google Page Speed uses internally*). It also fails for majority of the "Progressive Web App" category and this is intentional. PWAs are fud.
+The site also passes all tests using `lighthouse` (*which is what [Google Page Speed](https://developers.google.com/speed/pagespeed/insights/) uses internally*). It also fails for majority of the "Progressive Web App" category and this is intentional. PWAs are fud.
 
 <picture>
   <source srcset="/images/lighthouse-2x.webp 2x,/images/lighthouse.webp" type="image/webp">
   <source srcset="/images/lighthouse-2x.png 2x, /images/lighthouse.png" type="image/png">
   <img src="/images/lighthouse.png" alt="lighthouse">
 </picture>
-
 
 The `css` is as minimal and as generic as possible while still providing a fully responsive layout. It is so tiny it is faster to inline it on every page than to load it from an external file. There are no classes and `html` tags themselves are styled.
 

@@ -5,10 +5,10 @@ Linux is dead, world is a fuck.
 **posts**
 
 - [This website](/website)
+- [Minimal Linux desktop](/rice)
 
 **laptop**
 
-- [screenshots](/rice)
 - [dotfiles](https://github.com/dylanaraps/dotfiles)
 - [bin](https://github.com/dylanaraps/bin)
 

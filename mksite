@@ -2,7 +2,7 @@
 #
 # mksite - Create a stupid simple website.
 
-templ='<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>blckk</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border: 2px solid #ddd}</style></head><body><main>{{content}}</main></body></html>'
+templ='<!DOCTYPE html><html lang=en><head><meta name="description" content="I like to dream"/><link href="data:image/png;base64," rel=icon type="image/png"><title>blckk</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif;color:#000;background-color:#fff;margin:0}img,main,pre>code{display:block;margin:0 auto}main{max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border: 2px solid #ddd}input{position:absolute;z-index:99}input[type=checkbox]:checked ~ section{filter:invert(100%);background-color:#fff}section{min-height:100vh}</style></head><body><input type=checkbox><section><main><br><br>{{content}}<br></main></section></body></html>'
 
 [[ -z $1 ]] && rm -rf .site
 

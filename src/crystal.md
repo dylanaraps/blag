@@ -73,6 +73,7 @@ The distro, [Devuan](https://devuan.org/) will use a similar solution and there 
 // Core
 busybox
 musl
+gcc
 
 // Kernel
 linux

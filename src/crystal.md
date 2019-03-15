@@ -11,17 +11,16 @@ Proprietary software will not be packaged either and binary blobs will be remove
 Web browsers will by default build with all telemetry disabled. As an alternative to Firefox/Chromium; Smaller browsers like Otter Browser and Falkon will also be packaged.
 
 
-## FAQ
+## Information
 
 <!-- vim-markdown-toc GFM -->
 
-    * [What kind of release schedule is expected?](#what-kind-of-release-schedule-is-expected)
-    * [Why shell scripts?](#why-shell-scripts)
-    * [Where will package build scripts be stored?](#where-will-package-build-scripts-be-stored)
-    * [Will binaries be offered for Firefox/Chromium?](#will-binaries-be-offered-for-firefoxchromium)
-    * [What about `/etc/machine-id`?](#what-about-etcmachine-id)
-* [TODO](#todo)
-    * [Packages in `base`.](#packages-in-base)
+* [What kind of release schedule is expected?](#what-kind-of-release-schedule-is-expected)
+* [Why shell scripts?](#why-shell-scripts)
+* [Where will package build scripts be stored?](#where-will-package-build-scripts-be-stored)
+* [Will binaries be offered for Firefox/Chromium?](#will-binaries-be-offered-for-firefoxchromium)
+* [What about `/etc/machine-id`?](#what-about-etcmachine-id)
+* [Packages in `base`.](#packages-in-base)
 
 <!-- vim-markdown-toc -->
 
@@ -67,8 +66,6 @@ Example zeroed `/etc/machine-id` file:
 
 The distro, [Devuan](https://devuan.org/) will use a similar solution and there has been talk in the [Gentoo](https://www.gentoo.org/) forums about possible alternative solutions. You can follow the discussion of the former [here](https://lists.dyne.org/lurker/message/20190308.124740.2b7329de.en.html).
 
-
-## TODO
 
 ### Packages in `base`.
 

@@ -20,7 +20,7 @@ Web browsers will by default build with all telemetry disabled. As an alternativ
 * [Where will package build scripts be stored?](#where-will-package-build-scripts-be-stored)
 * [Will binaries be offered for Firefox/Chromium?](#will-binaries-be-offered-for-firefoxchromium)
 * [What about `/etc/machine-id`?](#what-about-etcmachine-id)
-* [Packages in `base`.](#packages-in-base)
+* [Packages installed by default.](#packages-installed-by-default)
 * [Hierarchy](#hierarchy)
 
 <!-- vim-markdown-toc -->
@@ -68,7 +68,7 @@ Example zeroed `/etc/machine-id` file:
 The distro, [Devuan](https://devuan.org/) will use a similar solution and there has been talk in the [Gentoo](https://www.gentoo.org/) forums about possible alternative solutions. You can follow the discussion of the former [here](https://lists.dyne.org/lurker/message/20190308.124740.2b7329de.en.html).
 
 
-### Packages in `base`.
+### Packages installed by default.
 
 ```
 // Core
@@ -96,19 +96,24 @@ Subject to change. Work in progress.
 ```
 distro/
 ├─ bin/
+│  ├─ # core programs
 ├─ boot/
 ├─ dev/
 ├─ etc/
 │  ├─ machine-id
 │  ├─ os-release
 ├─ home/
+│  ├─ # user/
 ├─ lib/
 ├─ proc/
 ├─ root/
 ├─ run/
+├─ sbin/
 ├─ sys/
 ├─ tmp/
 ├─ usr/
+│  ├─ bin/
+│  ├─ share/
 ├─ var/
 ┘
 ```

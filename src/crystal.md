@@ -79,7 +79,7 @@ git
 
 // Kernel
 linux
-linux-firmware
+linux-firmware (only for livecd)
 
 // Misc
 shadow

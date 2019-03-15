@@ -4,6 +4,7 @@
 
 **posts**
 
+- [Upcoming Linux Distribution](/crystal)
 - [Openbox depends on rust](/openbox)
 - [This website](/website)
 - [Minimal Linux desktop](/rice)

@@ -75,6 +75,7 @@ The distro, [Devuan](https://devuan.org/) will use a similar solution and there 
 busybox
 musl
 gcc
+git
 
 // Kernel
 linux

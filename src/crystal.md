@@ -87,14 +87,6 @@ file
 
 // Disks
 e2fsprogs
-jfsutils
-lvm2
-xfsprogs
-reiserfsprogs
-mdadm
-
-// Hardware
-pciutils
 ```
 
 ### Hierarchy

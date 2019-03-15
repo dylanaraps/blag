@@ -21,6 +21,7 @@ Web browsers will by default build with all telemetry disabled. As an alternativ
 * [Will binaries be offered for Firefox/Chromium?](#will-binaries-be-offered-for-firefoxchromium)
 * [What about `/etc/machine-id`?](#what-about-etcmachine-id)
 * [Packages in `base`.](#packages-in-base)
+* [Hierarchy](#hierarchy)
 
 <!-- vim-markdown-toc -->
 
@@ -93,4 +94,28 @@ mdadm
 
 // Hardware
 pciutils
+```
+
+### Hierarchy
+
+Subject to change. Work in progress.
+
+```
+distro/
+├─ bin/
+├─ boot/
+├─ dev/
+├─ etc/
+│  ├─ machine-id
+│  ├─ os-release
+├─ home/
+├─ lib/
+├─ proc/
+├─ root/
+├─ run/
+├─ sys/
+├─ tmp/
+├─ usr/
+├─ var/
+┘
 ```

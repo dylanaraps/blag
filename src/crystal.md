@@ -25,7 +25,6 @@ Web browsers will by default build with all telemetry disabled. As an alternativ
 
 <!-- vim-markdown-toc -->
 
-
 ### What kind of release schedule is expected?
 
 The distribution will be of the rolling release kind. Packages will be updated as soon as they are available (*keeping in mind minor testing in case things go awry*). That being said, this is a compile-your-own-packages type of distribution so the choice is ultimately up to you.

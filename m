@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir -p w
+
 for s in s/*; do
     pandoc -f markdown-smart -t html5 \
            "$@" \

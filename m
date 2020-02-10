@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# mkdir -p w
+mkdir -p w
+:>w/index.html
 
 # for s in s/*; do
 #     pandoc -f markdown-smart -t html5 \

@@ -9,5 +9,5 @@ for s in s/*; do
            --no-highlight \
            --template=s/d/t \
            "$s" |
-           sed ':a;N;$!ba;s|>\s*<|><|g' > "../w/${s##*/}.html"
+           sed ':a;N;$!ba;s|>\s*<|><|g' > "w/${s##*/}.html"
 done

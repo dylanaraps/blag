@@ -91,3 +91,29 @@ Konimex came up with a wonderful solution which required only a single character
 The solution was to simply symlink every unchanged file to the KISS repository's copy of the package files.
 
 This feature's usage can best be seen in the PPC64LE port of KISS here: <https://github.com/jedavies-dev/kiss-ppc64le/tree/master/repo/binutils>
+
+
+## Repositories
+
+Credit for this solution goes to Viz from a Linux Discord when I first started development of KISS.
+
+I asked the question; "What would be the best way to implement repositories?"
+
+Bear in mind that this feature had various requirements. It had to be easily extendable, had to have some kind of ordering and had to be easy to use.
+
+The most obvious solutions came first. Part of a config file or a special file for repositories. I was then thinking, what should the format be? How does one set ordering? What if the user wants to set it temporarily at runtime?
+
+Later on, Viz sent a message saying: "What if it worked like '$PATH'"?
+
+I thought about it for a few minutes and was left unable to refute it in any way. The '$PATH' variable is known, has documented semantics (ordering, etc) and is an environment variable (can be set at runtime, per user, system-wide, changed with code(!), etc).
+
+This was simple to add to the package manager as well. Effectivly, a simple `find` call, picking the first match in the colon separated list of paths.
+
+
+## Conclusion
+
+These five features are fundamental in usage of the package manager and they each required no "real" changes, additions or code to be implemented.
+
+The one thing they did require was **thought**. 
+
+Sometimes the simplest of ideas are the hardest to formalize.

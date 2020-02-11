@@ -1,1 +1,93 @@
-1
+# Free features
+
+When writing the package manager for [KISS Linux](https://getkiss.org) I began to abuse what I now call "free features". 
+
+Utilizing said concept allowed me to add a myriad of features to the package manager without increasing its size or complexity.
+
+What is a "free feature"? To sum it up the best I can:
+
+> A feature which lightly wraps around existing (and known) system behavior, requiring little to no code for its implementation and usage. 
+
+
+## Repository Signing
+
+KISS repositories support optional repository signature verification. This feature required no "real" code be added for its function with the only code addition being the printage of a tick when enabled.
+
+```
+# Display a tick if signing is enabled for this
+# repository.
+case $(git config merge.verifySignatures) in
+    true) log "$PWD" "[signed ✓] " ;;
+    *)    log "$PWD" " "  ;;
+esac
+```
+
+The repository system in KISS wraps around `git` for remote repositories. As youmay have discerned from above, the signing feature uses what is already available in Git.
+
+All a user must do to enable signature verification is effectively a GPG key import and a `git config merge.verifySignatures true` in the repository.
+
+The package manager will then simply call `git fetch` and `git merge`. Git's verification system kicks in if enabled and does its magic. 
+
+This feature can easily be toggled, works in user repositories, is well documented, makes use of existing behavior in Git and required nothing but some sugar on our side!
+
+
+## Skipping automatic tarball extraction
+
+KISS has a policy of **not** allowing a network connection to be required during builds. The package manager will pre-download all sources and files beforehand and verify them against a set of checksums.
+
+One package which caused me a good headache was Rust. During its bootstrap process it will download three separate tarballs. This violated the above policy.
+
+I thought, "easy enough, I'll just extract the three URLs and tell the package manager to extract them". I was wrong.
+
+For Rust's bootstrap tool (`x.py`) to detect the pre-downloaded tarballs they must remain unextracted and in a dated folder.
+
+The package manager didn't yet allow for an archived source to specify that it remain.. an archived source. I also didn't want to complicate the sources format unless absolutely necessary.
+
+So I did some thinking and came up with a solution which abuses existing behavior and required no additional code in the package manager.
+
+The package manager will automatically extract a `tar` archive if the basename of the URL ends in a lazy glob of `.tar.??|.tar.???|etc...`.
+
+```
+https://static.rust-lang.org/dist/2019-12-19/rust-std-1.40.0-x86_64-unknown-linux-musl.tar.xz?no-extract
+```
+
+To disable automatic extraction one must simply append `?no-extract` (or any phrase really) to the end of the source URL. 
+
+Curl ignores this addition while it tricks the package manager into treating the archive as a regular file, skipping the auto-extraction.
+
+The sources format has remained simple and in the rare case where automatic extraction must be disabled, there's a simple method of doing so.
+
+
+## Handling installed packages which no longer belong to a repository
+
+What happens if I install a package from a repository and it is later removed from the repository? What if I need to rebuild the package? What if...?
+
+This was a tricky question to answer. What *do* I do? The package's repository files no longer exist and the user is left with software they have no means of updating, rebuilding or modifying.
+
+I had a *huzzah!* moment. The repository files *do* still exist. When the package manager installs a package, all of its repository files are simply copied to `/var/db/kiss/installed/` acting as a "database entry" in the installed "database".
+
+The solution I came up with was to simply treat `/var/db/kiss/installed` as an additional package repository, as, in reality, *it is* an additional package repository.
+
+It made too much sense. The user retains the means to turn the package's source code into zeros and ones and the above questions are answered.
+
+If the user would like to modify or update the software they can simply copy the dirctory in `/var/db/kiss/installed` to their personal repository.
+
+```
+cp -r /var/db/kiss/installed/pkg /path/to/my_repo
+```
+
+## Simple forking of repository packages
+
+I didn't come up with this solution, all credit goes to [Konimex](https://github.com/konimex).
+
+For a user to "fork" a package's repository files they wee required to copy the package's repository files into their personal repository.
+
+The issue with this is that the user is then left with the burden of ensuring that every package they fork be kept up to date.
+
+Updates to the package from the KISS repositories wouldn't trickle down into their fork of the package.
+
+Konimex came up with a wonderful solution which required only a single character be added to the package manager (the letter `L` in a `cp` call).
+
+The solution was to simply symlink every unchanged file to the KISS repository's copy of the package files.
+
+This feature's usage can best be seen in the PPC64LE port of KISS here: <https://github.com/jedavies-dev/kiss-ppc64le/tree/master/repo/binutils>

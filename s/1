@@ -109,6 +109,8 @@ I thought about it for a few minutes and was left unable to refute it in any way
 
 This was simple to add to the package manager as well. Effectivly, a simple `find` call, picking the first match in the colon separated list of paths.
 
+There was no longer a need of picking a system-wide and per user location for a file, no need to write a parser of any kind for the file, no need to find a way to modify the settings at runtime etc etc.
+
 
 ## Conclusion
 
